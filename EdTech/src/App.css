@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.homepage_bg{
+  background: url("../src//assets/Images/bghome.svg");
+}
+.spinner{
+  --d:22px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #766DF4;
+  box-shadow: 
+    calc(1*var(--d))      calc(0*var(--d))     0 0,
+    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d))      calc(1*var(--d))     0 2px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+    calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+    calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+  animation: s7 1s infinite steps(8);
+}
+
+@keyframes s7 {
+  100% {transform: rotate(1turn)}
+}
+
+@media (max-width:460px){
+  .profile_change{
+    flex-direction:column;
+    margin: auto;
+  }
+  .delete_account{
+    flex-direction: column;
+    margin: auto;
+  }
+  .my_profile1{
+    flex-direction: column;
+    text-align: center;
+  }
+  .my_profile{
+    gap:10px;
+  }
+  .my_profile_about{
+    flex-direction: column;
+    gap:10px;
+  }
+  
+
+
+}
+@media (max-width:660px){
+  .my_profile{
+    flex-direction: column;
+  }
+  .my_profile_details{
+    flex-direction: column;
+  }
+  .view_course{
+    width: 130px;
+  }
+  .view_course_btn{
+    flex-direction: column;
+    gap:1rem;
+  }
+}
