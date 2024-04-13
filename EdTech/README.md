@@ -45,6 +45,3 @@ To run the Study Notion application locally, follow these steps:
 4. Start the server using `npm start`.
 5. Access the application in your browser at `http://localhost:3000`.
 
-=
-## Project Live at:
-[project-link]().
