@@ -14,10 +14,11 @@ import { IoMdClose } from "react-icons/io";
 
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
   };
+
 
   const { token } = useSelector((state) => state.auth);
   const { user } = useSelector((state) => state.profile);
@@ -57,10 +58,10 @@ export const Navbar = () => {
         </Link>
         <nav>
           <ul
-            className={`hidden lg:flex lg:gap-x-6 lg:flex-row md:gap-x-3 text-richblack-25` }
+            className={`hidden lg:flex lg:gap-x-6 lg:flex-row md:gap-x-3 text-richblack-25`}
           >
             {NavbarLinks.map((link, index) => (
-              <li key={index} >
+              <li key={index}>
                 {link.title === "Catalog" ? (
                   <div
                     className={`relative flex gap-2 items-center group cursor-pointer`}
@@ -112,10 +113,10 @@ export const Navbar = () => {
             {isMobileMenuOpen ? <IoMdClose /> : <RiMenu2Line />}
           </button>
           {isMobileMenuOpen && (
-            <nav className={`fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm z-40` }> 
-              <ul
-                className={`flex flex-col gap-6 text-richblack-25`}
-              >
+            <nav
+              className={`fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm z-40`}
+            >
+              <ul className={`flex flex-col gap-6 text-richblack-25`}>
                 {NavbarLinks.map((link, index) => (
                   <li key={index}>
                     {link.title === "Catalog" ? (
@@ -126,7 +127,7 @@ export const Navbar = () => {
                         <IoIosArrowDropdownCircle />
 
                         <div
-                          className={`invisible absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[30%] flex flex-col rounded-md bg-richblack-5 p-4 text-richblack-900 transition-all duration-200 lg:w-[250px] lg:group-hover:visible lg:group-hover:opacity-100 lg:group-hover:cursor-pointer z-50`}
+                          className={`invisible absolute lg:left-[50%] lg:top-[50%] translate-x-[-50%] lg:translate-y-[30%] flex flex-col rounded-md bg-richblack-5 p-4 text-richblack-900 transition-all duration-200 w-[250px] group-hover:visible group-hover:opacity-100 group-hover:cursor-pointer z-50 sm:top-10 sm:text-sm`}
                         >
                           <div className="absolute left-[50%] top-0 h-6 w-6 translate-x-[80%] rotate-45 rounded-md bg-richblack-5 translate-y-[-45%]"></div>
                           {sublinks.length ? (
@@ -137,6 +138,7 @@ export const Navbar = () => {
                                   .toLowerCase()}`}
                                 key={index}
                                 className="py-1 font-semibold"
+
                               >
                                 <p>{subLink.name}</p>
                               </Link>
@@ -147,7 +149,7 @@ export const Navbar = () => {
                         </div>
                       </div>
                     ) : (
-                      <Link to={link?.path} >
+                      <Link to={link?.path}>
                         <p
                           className={`${
                             matchRout(link?.path)
@@ -171,7 +173,11 @@ export const Navbar = () => {
           {user && user?.accountType != "Instructor" && (
             <Link to="/dashboard/cart" className="relative">
               <AiOutlineShoppingCart className="text-2xl text-white mr-3" />
-              {totalItems > 0 && <span className="absolute text-richblack-5 w-4 h-4 text-[11px] -mt-8 ml-4 rounded-full bg-caribbeangreen-700 text-center animate-bounce">{totalItems}</span>}
+              {totalItems > 0 && (
+                <span className="absolute text-richblack-5 w-4 h-4 text-[11px] -mt-8 ml-4 rounded-full bg-caribbeangreen-700 text-center animate-bounce">
+                  {totalItems}
+                </span>
+              )}
             </Link>
           )}
           {token === null && (
