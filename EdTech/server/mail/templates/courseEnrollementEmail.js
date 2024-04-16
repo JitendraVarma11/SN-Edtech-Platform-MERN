@@ -59,7 +59,7 @@ exports.courseEnrollmentEmail=(courseName, name)=>{
     </head>
     <body>
         <div class="container">
-            <a href="your publish link of this project">
+            <a href="https://sn-edtech-platform.vercel.app/">
             <img src="https://i.ibb.co/7Xyj3PC/logo.png" class="logo" alt="Studynotion_logo"></a>
         </div>
 

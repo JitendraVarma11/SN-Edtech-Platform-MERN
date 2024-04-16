@@ -47,7 +47,7 @@ exports.passwordUpdate=(name,email)=>{
     </head>
     <body>
         <div class="container">
-            <a href="your publish link of this project"><img src="logo" class="https://i.ibb.co/7Xyj3PC/logo.png" alt="Studynotion_logo"></a>
+            <a href="https://sn-edtech-platform.vercel.app/"><img src="logo" class="https://i.ibb.co/7Xyj3PC/logo.png" alt="Studynotion_logo"></a>
         </div>
 
         <div class="message">Password Update Confirmation</div>
