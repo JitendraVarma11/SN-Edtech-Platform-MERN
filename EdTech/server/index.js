@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: '`http://localhost:${process.env.FRONTEND_PORT || 3000}`',
+  origin: 'https://sn-edtech-platform.vercel.app',
   credentials: true,
 }));
 
