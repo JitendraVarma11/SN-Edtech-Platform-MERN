@@ -23,11 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-<<<<<<< HEAD
   origin: `*`,
-=======
-  origin: 'https://sn-edtech-platform.vercel.app',
->>>>>>> 1cd8bd7b2fa4b69fd92baf2430708a1e197bd4cc
   credentials: true,
 }));
 
