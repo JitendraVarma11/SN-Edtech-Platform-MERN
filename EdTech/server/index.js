@@ -23,8 +23,12 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: `*`,
-  credentials: true,
+  origin: 'https://sn-edtech-platform.vercel.app', 
+  methods: ['GET', 'POST'], // specify the allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // specify the allowed headers
+  exposedHeaders: ['Content-Length'], // specify the headers exposed to the browser
+  credentials: true, // enable credentials (cookies, authorization headers, etc.)
+  maxAge: 3600 
 }));
 
 app.use(
