@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: 'https://sn-edtech-platform.vercel.app', 
+  origin: '*', 
   methods: ['GET', 'POST'], // specify the allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization'], // specify the allowed headers
   exposedHeaders: ['Content-Length'], // specify the headers exposed to the browser
