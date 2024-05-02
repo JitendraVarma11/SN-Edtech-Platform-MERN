@@ -70,3 +70,12 @@ body {
     gap:1rem;
   }
 }
+.pop-up-message {
+  /* Style your pop-up message here */
+  opacity: 1; 
+  transition: opacity 3s ease-in-out; 
+}
+
+.pop-up-message.hidden {
+  opacity: 0;
+}
