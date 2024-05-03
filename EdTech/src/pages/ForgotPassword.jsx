@@ -21,7 +21,7 @@ const {loading}=useSelector((state)=>state.auth);
         loading?(
             <div className='spinner'></div>
         ):(
-            <div className='w-[28%]'>
+            <div className='md:w-[28%] w-11/12'>
                 <h1 className='text-4xl font-bold'>{
                     !emailSent?"Reset Your Password":"Check Your Email"
                     }
